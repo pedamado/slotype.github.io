@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<!-- 
+        SLOType v. 0.6 alpha (Seridipitous Creative [Type Design] Brief app prototype)
+        Co-developed by Pedro Amado (FBAUP / i2ADS) & Ana Catarina Silva (IPCA / ID+ CAOS).
+        With the collaboration from Julien Priez and Eduardo Napoleão (UFSC) 
+        2021-11-24. You may and should abuse this code, but remember to keep your code clean kids! ;)
+    -->
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="css/all.css" rel="stylesheet">
+    <!-- fontAwesome styles -->
+    <link href="css/jquery-ui.css" rel="stylesheet">
+    <!-- jQuery UI styles -->
+
+    <title>SLOType </title>
+</head>
+
+<body>
+    <div id="page">
+
+        <!-- App title area & header with nav & share button -->
+        <header>
+            <!-- fontAwesome icons -->
+            <i id="menu" class="fas fa-bars"></i>
+            <h1> SLOType</h1>
+            <div id="actions">
+                <a href="#"><i id="share" class="fas fa-share-alt"></i></a>
+                <a href="#"><i id="save" class="fas fa-bookmark"></i></a>
+                <a href="#"><i id="undo" class="fas fa-undo-alt"></i></a>
+            </div>
+
+        </header>
+        <!-- end header -->
+
+        <nav>
+            <small>SCB App. Alpha version 0.6 2021</small>
+
+            <!-- Menu: difficulty/complexity handles -->
+            <!-- easy = 1 // medium = 2 // advanced = 3 -->
+            <ul>
+                <!-- when clicked these trigger the visibility of contents -->
+                <li id="easy" dif="1">Easy</li>
+                <li id="medium" dif="2">Medium</li>
+                <li id="advanced" dif="3">Advanced</li>
+            </ul>
+
+        </nav>
+
+        <!-- Main briefing categories -->
+        <!-- [App] Category // Main Feature(s) // Users // Context // Constraints // Something Completely Different -->
+        <!-- The visibility of each section will be toggled by the menu -->
+        <main>
+            <section id="category" class="easy medium advanced" list="">
+
+                <!-- when the user clicks on each h2, the app refreshes the section p text -->
+                <h2>Context of Application</h2>
+                <p id="cat"><i class="lock fas fa-lock-open"></i></p>
+            </section>
+
+            <section id="feature-alt" class="advanced">
+                <h2>Stroke Construction</h2>
+                <p id="feata"></p>
+            </section>
+
+            <section id="feature" class="easy medium advanced">
+                <h2>Stroke Contrast</h2>
+                <p id="feat"></p>
+            </section>
+
+
+
+            <section id="users" class="easy medium advanced">
+                <h2>Categories</h2>
+                <p id="usr"></p>
+            </section>
+
+            <section id="context" class="medium advanced">
+                <h2>Weight</h2>
+                <p id="contx"></p>
+            </section>
+
+            <section id="constraints" class="medium advanced">
+                <h2>Width</h2>
+                <p id="const"></p>
+            </section>
+
+            <section id="variants" class=" advanced">
+                <h2>Slant</h2>
+                <p id="var"></p>
+            </section>
+
+            <section id="different" class="advanced">
+                <h2>And now, for something completely different</h2>
+                <p id="diff"></p>
+            </section>
+
+        </main>
+
+        <!-- final section with a Floating Action / CTA button -->
+        <footer>
+
+            <!-- //catl1 = Context of Application = Easy
+                //featal1 = Design Principle = Stroke Construction = Advanced
+                //featl1 = Design Principle = Stroke Contrast = Easy
+                //userl1 = Type Classification = Easy
+                //contxl1 = Weight = Medium
+                //constl1 = Width = Medium
+                //var1l1 = Slant ***** NEW ***** = Advanced
+                //somethingl1 = Serendipity = Advanced -->
+
+            <div id="rand"> Spin a new brief!<br />
+                <span id="myCode">
+                    <span id="codeDif"></span>
+                    .
+                    <span id="codeCat"></span>
+                    <span id="codeFeata"></span>
+                    <span id="codeFeat"></span>
+                    <span id="codeUser"></span>
+                    <span id="codeContx"></span>
+                    <span id="codeConst"></span>
+                    <span id="codeVar"></span>
+                    <span id="codeSomething"></span>
+                </span>
+            </div>
+
+        </footer>
+    </div>
+
+    <!-- jQuery -->
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+
+    <!-- jQuery UI (menu drawer) -->
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+
+    <!-- load array objects -->
+    <script type="text/javascript" src="js/objects.js"></script>
+
+    <!-- custom user defined script(s) -->
+    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/storage.js"></script>
+</body>
+
+</html>
